@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "186400339895",
+    "firebase_url": "https://appventas-aa60d.firebaseio.com",
+    "project_id": "appventas-aa60d",
+    "storage_bucket": "appventas-aa60d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186400339895:android:a373a799e3d3ff91",
+        "android_client_info": {
+          "package_name": "com.juan.autenticarmysql"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186400339895-anfsn96b847av39vc248q93i91gqh6ji.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.juan.autenticarmysql",
+            "certificate_hash": "5cdc903d46caceeb98437778b44681d69573dcc7"
+          }
+        },
+        {
+          "client_id": "186400339895-n4oprmk83avfnba0per1sk9bllglf34r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1ifCn3bswdxC4oA_faEwWFBobR5S32p0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186400339895-n4oprmk83avfnba0per1sk9bllglf34r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

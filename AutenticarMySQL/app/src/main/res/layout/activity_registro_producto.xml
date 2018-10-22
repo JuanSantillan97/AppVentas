@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityRegistroCliente">
+    tools:context=".ActivityRegistroProducto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textSize="20dp"
-                android:text="Nuevo Cliente"
+                android:text="Nuevo Producto"
                 android:layout_marginBottom="10dp"/>
 
         </LinearLayout>
@@ -34,55 +34,74 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/ibCliente"
+            <ImageView
+                android:id="@+id/ivProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/cliente"/>
+                app:srcCompat="@drawable/producto" />
 
         </LinearLayout>
 
         <EditText
-            android:id="@+id/etNombreCliente"
+            android:id="@+id/etNombreProducto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:textSize="7pt"
-            android:hint="Nombre del Cliente"/>
+            android:hint="Nombre del Producto"/>
 
         <EditText
-            android:id="@+id/etDireccionCliente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textSize="7pt"
-            android:hint="Dirección del Cliente"/>
-
-        <EditText
-            android:id="@+id/etTelefonoCliente"
+            android:id="@+id/etPrecioCostoProducto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
             android:textSize="7pt"
-            android:hint="Teléfono del Clietnte"/>
+            android:hint="Precio Costo del Producto"/>
 
         <EditText
-            android:id="@+id/etCorreoCliente"
+            android:id="@+id/etCantidadProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="7pt"
+            android:hint="Cantidad"/>
+
+        <EditText
+            android:id="@+id/etPrecioVentaProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="7pt"
+            android:hint="Precio Venta del Producto"/>
+
+        <EditText
+            android:id="@+id/etDescripcionProducto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:textSize="7pt"
-            android:hint="Correo Electrónico del Cliente"/>
+            android:hint="Descripción del Producto"/>
 
         <Button
-            android:id="@+id/btnRegistrarCliente"
+            android:id="@+id/btnTomarFoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
-            android:text="Registrar Cliente"
+            android:text="Tomar Foto"
+            android:textSize="7pt"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnRegistrarProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="Registrar Producto"
             android:textSize="7pt"
             android:layout_marginTop="10dp"/>
 

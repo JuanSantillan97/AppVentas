@@ -5,32 +5,32 @@
     android:layout_height="80dp">
 
     <ImageView
-        android:id="@+id/imgCliente"
+        android:id="@+id/imgProducto"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/cliente"/>
+        android:src="@drawable/producto" />
 
     <TextView
-        android:id="@+id/nombre"
+        android:id="@+id/nombreP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/imgCliente"
+        android:layout_toRightOf="@+id/imgProducto"
         android:text="TextView"
         android:padding="3dp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/direccion"
+        android:id="@+id/descripcionP"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_below="@+id/nombre"
-        android:layout_toRightOf="@+id/imgCliente"
+        android:layout_below="@+id/nombreP"
+        android:layout_toRightOf="@+id/imgProducto"
         android:padding="3dp"
         android:text="TextView"
         android:textSize="20sp"
-        android:layout_alignBottom="@+id/imgCliente" />
+        android:layout_alignBottom="@+id/imgProducto" />
 
 </RelativeLayout>

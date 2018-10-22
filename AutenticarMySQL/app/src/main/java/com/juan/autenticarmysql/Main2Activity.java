@@ -17,13 +17,15 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        getSupportActionBar().hide();
 
         // Boton Nueva Venta. -------------------------------------------------------------------------------------------------------------------------------
         btnNuevaVenta = findViewById(R.id.btnNuevaVenta);
         btnNuevaVenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Main2Activity.this, ActivityVenta.class);
+                startActivity(intent);
             }
         });
 
@@ -32,7 +34,7 @@ public class Main2Activity extends AppCompatActivity {
         btnClientes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), ActivityCliente.class);
+                Intent intent = new Intent(Main2Activity.this, ActivityCliente.class);
                 startActivity(intent);
             }
         });
@@ -42,8 +44,8 @@ public class Main2Activity extends AppCompatActivity {
         btnProductos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(view.getContext(), ActivityProducto.class);
-//                startActivity(intent);
+                Intent intent = new Intent(view.getContext(), ActivityProducto.class);
+                startActivity(intent);
             }
         });
 

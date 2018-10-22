@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityRegistroCliente">
+    tools:context=".ActivityProducto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,73 +18,55 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textSize="20dp"
-                android:text="Nuevo Cliente"
+                android:text="Productos"
                 android:layout_marginBottom="10dp"/>
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/ibCliente"
+            <ImageView
+                android:id="@+id/ivProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/cliente"/>
-
+                app:srcCompat="@drawable/producto" />
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/etNombreCliente"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textSize="7pt"
-            android:hint="Nombre del Cliente"/>
+            android:orientation="horizontal">
+            <ListView
+                android:id="@+id/lvProductos"
+                android:layout_width="wrap_content"
+                android:layout_height="350dp" />
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/etDireccionCliente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textSize="7pt"
-            android:hint="Dirección del Cliente"/>
 
-        <EditText
-            android:id="@+id/etTelefonoCliente"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="7pt"
-            android:hint="Teléfono del Clietnte"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp">
 
-        <EditText
-            android:id="@+id/etCorreoCliente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textSize="7pt"
-            android:hint="Correo Electrónico del Cliente"/>
+            <Button
+                android:id="@+id/btnNuevoProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerInParent="true"
+                android:background="@color/colorAccent"
+                android:text="Nuevo Producto"
+                android:textSize="7pt" />
 
-        <Button
-            android:id="@+id/btnRegistrarCliente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:text="Registrar Cliente"
-            android:textSize="7pt"
-            android:layout_marginTop="10dp"/>
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -13,6 +13,7 @@ public class ActivityEdicionCliente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edicion_cliente);
+        getSupportActionBar().hide();
 
         // Guardar cambios.
         // Boton editar cliente. ----------------------------------------------------------------------------------------------------------------------

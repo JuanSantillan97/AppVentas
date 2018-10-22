@@ -9,16 +9,16 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.juan.autenticarmysql.Model.Cliente;
+import com.juan.autenticarmysql.Model.Producto;
 
 import java.util.ArrayList;
 
-public class ClientesAdapter extends BaseAdapter{
+public class ProductosAdapter extends BaseAdapter{
 
     protected Activity activity;
-    protected ArrayList<Cliente> items;
+    protected ArrayList<Producto> items;
 
-    public ClientesAdapter (Activity activity, ArrayList<Cliente> items) {
+    public ProductosAdapter (Activity activity, ArrayList<Producto> items) {
         this.activity = activity;
         this.items = items;
     }
@@ -32,7 +32,7 @@ public class ClientesAdapter extends BaseAdapter{
         items.clear();
     }
 
-    public void addAll(ArrayList<Cliente> category) {
+    public void addAll(ArrayList<Producto> category) {
         for (int i =0 ; i < category.size(); i++) {
             items.add(category.get(i));
         }
@@ -54,19 +54,18 @@ public class ClientesAdapter extends BaseAdapter{
         View view = convertView;
         if (convertView == null) {
             LayoutInflater inf = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inf.inflate(R.layout.listview_cliente, null);
+            view = inf.inflate(R.layout.listview_producto, null);
         }
-        Cliente dir = items.get(position);
+        Producto dir = items.get(position);
 
-        TextView nombre =  view.findViewById(R.id.nombre);
-        nombre.setText(dir.getNombre());
+        TextView nombreP =  view.findViewById(R.id.nombreP);
+        nombreP.setText(dir.getNombreP());
 
-        TextView description =  view.findViewById(R.id.direccion);
-        description.setText(dir.getDireccion());
+        TextView descripcionP = view.findViewById(R.id.descripcionP);
+        descripcionP.setText(dir.getDescripcion());
 
-//        TextView imagen = view.findViewById(R.id.imgCliente);
-//        //imagen.setImageResource(dir.getImagen());
-//        imagen.setText(dir.getImagen());
+//        ImageView imagen = view.findViewById(R.id.imgProducto);
+//        imagen.setImageResource(dir.getImagenP());
 
         return view;
     }

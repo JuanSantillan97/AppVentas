@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ActivityVenta">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textSize="20dp"
-                android:text="App de Ventas"
+                android:text="Nueva Venta"
                 android:layout_marginBottom="10dp"/>
 
         </LinearLayout>
@@ -35,77 +35,98 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/ivUsuario"
+                android:id="@+id/ivVenta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/carrito" />
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Usuario"
-            android:textSize="7pt"/>
-
         <EditText
-            android:id="@+id/etUsuario"
+            android:id="@+id/etFecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="date"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:textSize="7pt"/>
+            android:focusable="false" />
 
         <TextView
-            android:id="@+id/tvContra"
+            android:id="@+id/tvCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contraseña"
-            android:textSize="7pt"/>
+            android:textSize="15dp"
+            android:text="Cliente"/>
 
-        <EditText
-            android:id="@+id/etContrasena"
+        <Spinner
+            android:id="@+id/spinnerCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:textSize="7pt"/>
-
-        <Button
-            android:id="@+id/btnEntrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:text="Entrar"
-
             android:textSize="7pt" />
 
+        <TextView
+            android:id="@+id/tvProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Producto"/>
+
+        <Spinner
+            android:id="@+id/spinnerProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"/>
+
+        <EditText
+            android:id="@+id/etCantidadVenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="7pt"
+            android:hint="Cantidad"/>
+
+        <EditText
+            android:id="@+id/etTotalVenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="7pt"
+            android:hint="Precio Venta del Producto"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/formasDePago"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rbContado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Pago de Contado" />
+                <RadioButton
+                    android:id="@+id/rbAbono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Pago en Abonos" />
+            </RadioGroup>
+        </LinearLayout>
+
         <Button
-            android:id="@+id/btnRegistrar"
+            android:id="@+id/btnRegistrarVenta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
-            android:text="Registrarse"
-
+            android:text="Vender"
             android:textSize="7pt"
             android:layout_marginTop="10dp"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp">
-
-            <CheckBox
-                android:id="@+id/cbRecordar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_weight="1"
-                android:text="Recordar contraseña"
-                android:textSize="7pt"/>
-        </RelativeLayout>
 
     </LinearLayout>
 

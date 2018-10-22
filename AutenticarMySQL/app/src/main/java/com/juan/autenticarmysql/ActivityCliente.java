@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.juan.autenticarmysql.Model.Cliente;
+
 import java.util.ArrayList;
 
 public class ActivityCliente extends AppCompatActivity {
@@ -17,17 +19,14 @@ public class ActivityCliente extends AppCompatActivity {
     ArrayList clientes;
 
     private void rellenarArrayList() {
-        clientes.add(new Cliente("Kamryn", "California", "3121116598" , "kym@gmail.com", R.drawable.kam));
-        clientes.add(new Cliente("Alberto", "Guadalajara", "3148976644" , "albert@gmail.com", R.drawable.kam));
-        clientes.add(new Cliente("Millie", "Colima", "3120000000" , "emillie@gmail.com", R.drawable.kam));
-
-        // poner codigo que jale datos de la BD y los ponga en el arrayList.
+        clientes.add(new Cliente("key1", "Kamryn", "California", "3121116598" , "kym@gmail.com", Integer.toString(R.drawable.kam)));
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente);
+        getSupportActionBar().hide();
 
         // Boton Nuevo Cliente. ---------------------------------------------------------------------------------------------------------------------------
         btnNuevoCliente = findViewById(R.id.btnNuevoCliente);
